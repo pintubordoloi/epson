@@ -23,7 +23,7 @@
 		.header {
 			padding: 80px;
 			text-align: center;
-			background: #1abc9c;
+			background: #5E6BBD;
 			color: white;
 			font-size: 30px;
 		
@@ -34,37 +34,55 @@
 			font-size: 40px;
 		}
 		
-		/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is
-		positioned relative until a given offset position is met in the viewport - then it "sticks" in place
-		 (like position:fixed).*/
 		 
-		 /*Syle the navigation bar link */
-		.navbar a {
+		.first-ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #3948A7;
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+		
+		.second-ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+			position: fixed;
+			width: 100%;
+		}
+		
+		li {
 			float: left;
+		}
+		
+		li a {
 			display: block;
 			color: white;
 			text-align: center;
-			padding: 14px 20px;
+			padding: 14px 16px;
 			text-decoration: none;
 		}
 		
-		/*Right aligned link */
-		.navbar a.right {
-			float: right;
-			background-color: #666;
-			color: white;
+		li a:hover:not(.active) {
+			background-color: #111;
 		}
 		
-		/* Change color on hover */
-		.navbar a:hover {
-			background-color: #ddd;
-			color: black;
+		.active {
+			background-color #4CAF50;
 		}
 		
-		/* Active/current link */
-		.navbar a.active {
-			background-color: #666;
-			color: white;
+		.icon {
+			background-image: url('icon.JPG');
+			background-repeat: no-repeat;
+			<!--background-position: 50% 10px;-->
+			height: 75px;
+			width: 75px;
+			padding: 14px 16px;
 		}
 		
 		/* Column container */
@@ -78,8 +96,8 @@
 		/* Create two unequal columns that sits next to each other */
 		/* Sidebar/left column */
 		.side {
-			-ms-flex: 30%;
-			flex: 30%;
+			-ms-flex: 15%;
+			flex: 15%;
 			background-color: #f1f1f1;
 			padding: 20px;
 		}
@@ -131,44 +149,72 @@
 		<p> <b>responsive</b>My Supercool header </p>
 	</div>
 	
-	<div class="navbar">
-		<a href="#" class="active"> Home </a>
-		<a href="#"> Link</a>
-		<a href="#"> Link</a>
-		<a href="#" class="right">Link</a>
-	
-	</div>
+	<ul class="first-ul">
+		<li class="icon"><a href="Icon"></a></li>
+		<li><a href="#home">Edu Specs</a></li>
+		<li><a href="#news">Popular</a></li>
+		<li><a href="#contact">All</a></li>
+		<li><a href="#about">Inforgraphics</a></li>
+		<li><a href="#Ebook">E-Books</a></li>
+		<li style="float:right"><a class="active" href="#Subscribe">Subscribe</a></li>
+	</ul>
 	
 	<div class="row">
+		
 		<div class="side">
-			<h2> About Me</h2>
-			<h5>Photo of me:</h5>
-			<div class="fakeimg" style="height: 20px;">Image</div>
-			<p>Some text about me</p>
-			<h3>More Text</h3>
-			<p>Lorem ipsum dolor sit ame.</p>
-			<div class="fakeimg" style="height:60px;">Image</div><br>
-			<div class="fakeimg" style="height:60px;">Image</div><br>
-			<div class="fakeimg" style="height:60px;">Image</div>
 		</div>
 		
 		<div class="main">
 			<h2>TITLE HEADING</h2>
 			<h5>Title description, Dec 7, 2017</h5>
 			<div class="fakeimg" style="height:200px;">Image</div>
-			<p>Some text..</p>
-			<p>Sunt in culpa qui officia deserunt mollit anim id est.</p>
-			<br>
-			<h2>TITLE HEADING</h2>
-			<h5>Title description, Sep 2, 2017</h5>
-			<div class="fakeimg" style="height:200px;">Image</div>
-			<p>Some text..</p>
-			<p>Sunt in culpa qui officia deserunt mollit anim idn ullamco.</p>
+			
+		</div>
+		
+		<div class="side">
 		</div>
 	</div>
 	
-	<div class="footer">
-		<h2>Footer</h2>
+	<div class="row">
+			
+		<div class="side">
+			<p>Hello 1</p>
+		</div>
+			
+		<div class="main">
+			<!--<ul class="second-ul">
+				<li><a href="#About"> About us</a></li>
+				<li><a href="#Terms"> Terms of Use</a></li>
+				<li><a href="#Dictionary"> Dictionary</a></li>
+			</ul>
+			<ul class="second-ul">
+				<li><a href="Editorial">Editorial Policy</a></li>
+				<li><a href="Advertise">Advertise</a></li>
+				<li><a href="News">News</a></li>
+			</ul>-->
+			<table>
+				<tr>
+					<td>About us</td>
+					<td>Terms of Use</td>
+					<td>Dictionary</td>
+				</tr>
+				
+				<tr>
+					<td><a href="#Editorial">Editorial Policy</a></td>
+					<td>Advertise</td>
+					<td>News</td>
+				</tr>
+				
+				<tr>
+					<td>Privacy Policy</td>
+					<td>Contact Us</td>
+					<td>Careers</td>
+				</tr>
+				
+			</table>
+		</div>
+			
+
 	</div>
 	
 </body>
